@@ -4,5 +4,5 @@
 // })
 $(window).on('load', function(event){
     $('body').removeClass('preloading');
-    $('.loader').delay(2300).fadeOut('slow');
+    $('.loader').delay(2350).fadeOut('fast');
 })
