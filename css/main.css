@@ -182,13 +182,13 @@ button:focus {
   transition: all 0.3s;
   display: block;
   margin: 25px auto;
-  height: 300px;
+  height: 250px;
   width: auto;
 }
 
 .product .container ul li .item__info h3 {
   line-height: 1.3em;
-  font-size: 20px;
+  font-size: 17px;
 }
 
 .product .container ul li .item__info .price {
