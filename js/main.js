@@ -43,7 +43,7 @@ function numberWithCommas(x) {
   return parts.join(".");
 }
 //Hàm tìm kiếm
-const findEmpl = function () {
+const findMobile = function () {
   const foundedEmpl = [];
   // 1. Lấy keyword người dùng nhaao vào (dom)
   const keyword = document
