@@ -31,7 +31,7 @@
     <section class="product">
       <div class="container">
         <!-- <img src="./img/samsung/samsung-galaxy-note-20-plus-600x600-1-600x600.jpg" alt=""> -->
-        <div class="w-25 mb-3">
+        <div class="w-25 mb-3 d-inline-block">
           <input
             oninput="findMobile()"
             type="text"
@@ -40,6 +40,18 @@
             id="txtSearch"
           />
         </div>
+        <select class="w-25 mb-3 d-inline-block" id="brandMobile" onchange="selectioneBrand()">
+          <option value="0">Chọn hãng điện thoại</option>
+          <option value="Apple">Apple</option>
+          <option value="Samsung">Samsung</option>
+        </select>
+        <select class="w-25 mb-3 d-inline-block" id="sortMobile" onchange="sltSortBrand()">
+          <option value="0">Sắp xếp</option>
+          <option value="AZ">Sắp xếp A-Z</option>
+          <option value="ZA">Sắp xếp Z-A</option>
+          <option value="tang">Giá tiền tăng dần</option>
+          <option value="giam">Giá tiền giảm dần</option>
+        </select>
         <ul  id="tblDanhSachDienThoai">
           
           <!-- <li class="item">
