@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+.loader {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100000;
+  display: block;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loader .box {
+  width: 300px;
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.loader .box .heart {
+  position: relative;
+  margin: auto;
+  height: 170px;
+  width: 200px;
+  -webkit-animation: animate 1s linear infinite;
+          animation: animate 1s linear infinite;
+}
+
+.loader .box .heart::before, .loader .box .heart::after {
+  content: "";
+  position: absolute;
+  background-color: #c0392b;
+  width: 100px;
+  height: 160px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+.loader .box .heart::before {
+  left: 100px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 14px 10px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 14px 10px rgba(0, 0, 0, 0.22);
+}
+
+.loader .box .heart::after {
+  left: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  30% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  60% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  30% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+  60% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.product {
+  margin-top: 20px;
+}
+
+.product .container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  border-top: 1px solid #eee;
+  border-left: 1px solid #eee;
+  margin-bottom: 15px;
+}
+
+.product .container ul li {
+  text-decoration: none;
+  width: 24.9%;
+  position: relative;
+  padding-bottom: 10px;
+  overflow: hidden;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.product .container ul li .item {
+  display: block;
+  overflow: hidden;
+  background: #fff;
+  padding: 10px 0;
+}
+
+.product .container ul li .item__info {
+  text-align: center;
+  display: block;
+  overflow: hidden;
+  background: #fff;
+  padding: 10px 0;
+}
+
+.product .container ul li .item__info:hover > img {
+  margin: 10px auto 40px;
+}
+
+.product .container ul li .item__info img {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: block;
+  margin: 25px auto;
+  height: 200px;
+  width: auto;
+}
+
+.product .container ul li .item__info h3 {
+  line-height: 1.3em;
+  font-size: 17px;
+}
+
+.product .container ul li .item__info .price {
+  padding: 5px 10px;
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  font-size: 14px;
+  color: #bf081f;
+  line-height: 15px;
+  font-weight: 700;
+}
+
+.product .container ul li .btnbuy {
+  padding: 5px 70px;
+  border: 2px solid #f76b1c;
+  border-radius: 5px;
+  background-color: #fff;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  text-transform: capitalize;
+}
+
+.product .container ul li .btnbuy:hover {
+  background-color: #f76b1c;
+  color: white;
+}
+/*# sourceMappingURL=main.css.map */
