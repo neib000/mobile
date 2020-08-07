@@ -1,5 +1,5 @@
 .product {
-    margin-top: 20px;
+  margin-top: 20px;
   .container {
     ul {
       display: flex;
@@ -21,52 +21,80 @@
           overflow: hidden;
           background: #fff;
           padding: 10px 0;
-          &__info{
+          &__info {
             text-align: center;
             display: block;
             overflow: hidden;
             background: #fff;
             padding: 10px 0;
-            
-            &:hover>img{
-                margin: 10px auto 40px;
+
+            &:hover > img {
+              margin: 10px auto 40px;
             }
             img {
-                transition: all 0.3s;
-                display: block;
-                margin: 25px auto;
-                height: 200px;
-                width: auto;
-              }
-            h3{
-                line-height: 1.3em;
-                font-size: 17px;
+              transition: all 0.3s;
+              display: block;
+              margin: 25px auto;
+              height: 200px;
+              width: auto;
             }
-            .price{
-                padding: 5px 10px;
-                display: inline-block;
-                vertical-align: middle;
-                overflow: hidden;
-                font-size: 14px;
-                color: #bf081f;
-                line-height: 15px;
-                font-weight: 700;
+            h3 {
+              line-height: 1.3em;
+              font-size: 17px;
+            }
+            .price {
+              padding: 5px 10px;
+              display: inline-block;
+              vertical-align: middle;
+              overflow: hidden;
+              font-size: 14px;
+              color: #bf081f;
+              line-height: 15px;
+              font-weight: 700;
             }
           }
         }
-        .btnbuy{
-            padding: 5px 70px;
-            border: 2px solid #f76b1c ;
-            border-radius: 5px;
-            background-color: #fff;
-            transition: all 0.5s;
-            text-transform: capitalize;
-            &:hover{
-                background-color: #f76b1c;
-                color: white;
-            }
+        .btnbuy {
+          padding: 5px 70px;
+          border: 2px solid #f76b1c;
+          border-radius: 5px;
+          background-color: #fff;
+          transition: all 0.5s;
+          text-transform: capitalize;
+          &:hover {
+            background-color: #f76b1c;
+            color: white;
+          }
         }
-
+      }
+    }
+  }
+  .btnCart {
+    a {
+      text-decoration: none;
+    }
+    &__cart {
+      border: 2px solid #189eff;
+      border-radius: 5px;
+      background-color: #fff;
+      padding: 10px 40px;
+      transition: all 0.5s;
+      &:hover {
+        background-color: #189eff;
+        color: white;
+      }
+      .btnCart__text {
+        color: rgb(74, 74, 74);
+        height: 20px;
+        display: inline-block;
+        text-align: center;
+        line-height: 20px;
+        margin-left: 9px;
+        font-size: 12px;
+        font-weight: 700;
+        background: rgb(253, 216, 53);
+        border-radius: 2px;
+        padding: 0px 6px;
       }
     }
   }

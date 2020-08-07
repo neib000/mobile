@@ -216,4 +216,36 @@ button:focus {
   background-color: #f76b1c;
   color: white;
 }
+
+.product .btnCart a {
+  text-decoration: none;
+}
+
+.product .btnCart__cart {
+  border: 2px solid #189eff;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 10px 40px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.product .btnCart__cart:hover {
+  background-color: #189eff;
+  color: white;
+}
+
+.product .btnCart__cart .btnCart__text {
+  color: #4a4a4a;
+  height: 20px;
+  display: inline-block;
+  text-align: center;
+  line-height: 20px;
+  margin-left: 9px;
+  font-size: 12px;
+  font-weight: 700;
+  background: #fdd835;
+  border-radius: 2px;
+  padding: 0px 6px;
+}
 /*# sourceMappingURL=main.css.map */
