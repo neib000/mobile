@@ -1,20 +1,105 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Title</title>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
-  <body>
-      
+  <body style="background-color: #f4f4f4;">
+    <div class="container container--checkout">
+      <h2 class="d-inline-block">Giỏ Hàng</h2>
+      <span class="d-inline-block">
+        ( <span id="btnAmount"></span> Sản Phẩm)</span>
+      <div class="checkout" id="tblCheckout">
+        <div class="row cart">
+          <div class="col-9 cart-inner">
+            <ul class="cart-prodcuts" id="cardProductsList" >
+              <!-- <li class="cart-products__products">
+                <div class="cart-products__inner">
+                  <div class="cart-products__img">
+                    <img
+                      src="./img/iphone/iphone-11-128gb-green-400x460.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="cart-products__content">
+                    <div class="cart-products__desc">
+                      <div class="cart-products__name">Iphone 11</div>
+                      <div class="cart-products__actions">
+                        <span class="cart-products__del">Xóa</span>
+                      </div>
+                    </div>
+                    <div class="cart-products__details">
+                      <div class="cart-products__pricess">
+                        <p class="cart-products__real-prices">900.000đ</p>
+                      </div>
+                      <div class="cart-products__qty">
+                        <div class="CartQty__StyledCartQty-o1bx97-0 iaIXXn">
+                          <span class="qty-decrease">-</span>
+                          <input type="tel" class="qty-input" value="2" />
+                          <span class="qty-increase">+</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li> -->
+            </ul>
+          </div>
+          <div class="col-3 cart-total-prices">
+            <div class="prices">
+              <ul class="prices__items">
+                <li class="prices__item">
+                  <span class="prices__text" onclick="">Tổng tiền</span>
+                  <span class="prices__value" id="priceValue">55.742đ</span>
+                </li>
+              </ul>
+            </div>
+            <button type="button" onclick="payMB()" class="cart__submit">
+              Thanh Toán
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script src="./js/loader.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/models/Mobile.js"></script>
+    <script src="./js/services/axios.js"></script>
+    <script src="./js/services/MobileServices.js"></script>
+    <script src="./js/general.js"></script>
+    <!-- <script src="./js/main.js"></script> -->
+    <script src="./js/checkout.js"></script>
   </body>
 </html>

@@ -36,11 +36,7 @@ const renderHTML = function (arr) {
   }
   document.getElementById("tblDanhSachDienThoai").innerHTML = htmlcontent;
 };
-function numberWithCommas(x) {
-  var parts = x.toString().split(".");
-  parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-  return parts.join(".");
-}
+
 //Hàm tìm kiếm
 const findMobile = function () {
   const foundedMoblie = [];
@@ -139,95 +135,3 @@ const sltSortBrand = function () {
     renderHTML(sapXepDT);
   }
 };
-
-var cartList = [];
-// console.log(cartList.length);
-const findById = function (id) {
-  for (var i = 0; i < cartList.length; i++) {
-    if (cartList[i].id === id) {
-      return i;
-    }
-  }
-  return -1;
-};
-const renderBTN = function () {
-  document.getElementById("btnAmount").innerHTML = cartList.length;
-}
-renderBTN();
-const addCart = function (id) {
-  id = id.toString();
-  for (var i = 0; i < danhSachDienThoai.length; i++) {
-    const currentMobile = danhSachDienThoai[i];
-    currentMobile.invetory = 1;
-    if (currentMobile.id === id) {
-      // console.log(currentMobile.id);
-      if (cartList.length <= 0) {
-        console.log(cartList.length);
-        cartList.push(currentMobile);
-        console.log(cartList);
-      }
-      else{
-        console.log(cartList.length);
-        const index = findById(id);
-        if (index !== -1) {
-          cartList[index].invetory ++;
-          cartList[index] = new Mobile(cartList[index].id,cartList[index].name, cartList[index].image, cartList[index].description, cartList[index].price, cartList[index].invetory, cartList[index].type);
-
-        } else {
-          cartList.push(currentMobile);
-        }
-      }
-    }
-  }
-  renderBTN();
-  console.log(cartList);
-  saveData();
-};
-const saveData = function () {
-  localStorage.setItem("cartList", JSON.stringify(cartList));
-};
-// const getData = function () {
-//   var cartListJSON = localStorage.getItem("cartList");
-//   //Kiểm tra tonnf tại dữ liệu
-//   if (!cartListJSON) return;
-//   const cartListFromLocal = JSON.parse(cartListJSON);
-//   for (var i = 0; i < cartList.length; i++) {
-//     const currentEmpl = emplListFromLocal[i];
-
-//     const empl = new Employee(
-//       currentEmpl.id,
-//       currentEmpl.lastName,
-//       currentEmpl.firstName,
-//       currentEmpl.startedDate,
-//       currentEmpl.position
-//     );
-//     emplList.push(empl);
-//   }
-//   renderEmpls();
-// };
-const renderCart = function(){
-  var htmlcontentCart = "";
-  for (var i = 0; i < cartList.length; i++) {
-    var dienThoai = cartList[i];
-    htmlcontentCart += `
-          <li class="item">
-            <div class="item__info">
-              <img
-                src="${dienThoai.image}"
-                alt=""
-              />
-              <h3>
-              ${dienThoai.name}
-              </h3>
-              <div class="price">
-              ${numberWithCommas(dienThoai.price)}₫
-              </div>
-            </div>
-            <button class="btnbuy" onclick="addCart(${dienThoai.id})" >
-              Cart
-            </button>
-          </li>
-          `;
-  }
-  document.getElementById("tblDanhSachDienThoai").innerHTML = htmlcontentCart;
-}
