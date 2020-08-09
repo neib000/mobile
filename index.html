@@ -23,8 +23,7 @@
     <div class="loader">
       <!-- <span class="fas fa-spider xoay icon"></span> -->
       <div class="box">
-          <div class="heart">
-          </div>
+        <div class="heart"></div>
       </div>
     </div>
     <header></header>
@@ -40,12 +39,20 @@
             id="txtSearch"
           />
         </div>
-        <select class="w-25 mb-3 d-inline-block" id="brandMobile" onchange="selectioneBrand()">
+        <select
+          class="w-25 mb-3 d-inline-block"
+          id="brandMobile"
+          onchange="selectioneBrand()"
+        >
           <option value="0">Chọn hãng điện thoại</option>
           <option value="Apple">Apple</option>
           <option value="Samsung">Samsung</option>
         </select>
-        <select class="w-25 mb-3 d-inline-block" id="sortMobile" onchange="sltSortBrand()">
+        <select
+          class="w-25 mb-3 d-inline-block"
+          id="sortMobile"
+          onchange="sltSortBrand()"
+        >
           <option value="0">Sắp xếp</option>
           <option value="AZ">Sắp xếp A-Z</option>
           <option value="ZA">Sắp xếp Z-A</option>
@@ -61,8 +68,7 @@
             </div>
           </a>
         </div>
-        <ul  id="tblDanhSachDienThoai">
-          
+        <ul id="tblDanhSachDienThoai">
           <!-- <li class="item">
             <div class="item__info">
               <img
@@ -148,7 +154,6 @@
               Card
             </button>
           </li> -->
-         
         </ul>
         <!-- <div class="row">
             <div class="img-fluid col-3">
@@ -191,6 +196,7 @@
     <script src="./js/services/MobileServices.js"></script>
     <script src="./js/general.js"></script>
     <script src="./js/main.js"></script>
-    <script src="./js/checkout.js"></script>
+    <!-- <script src="./js/checkout.js"></script> -->
   </body>
 </html>
+

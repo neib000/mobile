@@ -259,6 +259,37 @@ button:focus {
   border-radius: 5px;
 }
 
+.container .checkout .empty {
+  text-align: center;
+  width: 100%;
+  background: white;
+  padding: 40px 20px;
+  border-radius: 4px;
+}
+
+.container .checkout .empty .empty__img {
+  width: 190px;
+  font-size: 120px;
+  color: #5499da;
+}
+
+.container .checkout .empty .empty__note {
+  margin: 15px 0px 30px;
+}
+
+.container .checkout .empty .empty__btn {
+  background-color: #fdd835;
+  color: #4a4a4a;
+  font-weight: 500;
+  display: inline-block;
+  padding: 10px 55px;
+  border-radius: 4px;
+}
+
+.container .checkout .empty a {
+  text-decoration: none;
+}
+
 .container .checkout .cart-inner {
   background: white;
   margin: 0px;

@@ -7,8 +7,8 @@ function xuLyLayDanhSachDienThoai() {
   });
 }
 xuLyLayDanhSachDienThoai();
-var danhSachDienThoai = [];
-
+getData();
+renderBTN();
 const renderHTML = function (arr) {
   arr = arr || danhSachDienThoai;
   var htmlcontent = "";
@@ -135,3 +135,39 @@ const sltSortBrand = function () {
     renderHTML(sapXepDT);
   }
 };
+const addCart = function (id) {
+  id = id.toString();
+  for (var i = 0; i < danhSachDienThoai.length; i++) {
+    const currentMobile = danhSachDienThoai[i];
+    currentMobile.invetory = 1;
+    if (currentMobile.id === id) {
+      // console.log(currentMobile.id);
+      if (cartList.length <= 0) {
+        console.log(cartList.length);
+        cartList.push(currentMobile);
+        console.log(cartList);
+      } else {
+        console.log(cartList.length);
+        const index = findById(id);
+        if (index !== -1) {
+          cartList[index].invetory++;
+          cartList[index] = new Mobile(
+            cartList[index].id,
+            cartList[index].name,
+            cartList[index].image,
+            cartList[index].description,
+            cartList[index].price,
+            cartList[index].invetory,
+            cartList[index].type
+          );
+        } else {
+          cartList.push(currentMobile);
+        }
+      }
+    }
+  }
+  renderBTN();
+  console.log(cartList);
+  saveData();
+};
+
