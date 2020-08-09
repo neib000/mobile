@@ -182,7 +182,7 @@ button:focus {
   transition: all 0.3s;
   display: block;
   margin: 25px auto;
-  height: 200px;
+  height: 250px;
   width: auto;
 }
 

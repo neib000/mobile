@@ -9,12 +9,10 @@ function xuLyLayDanhSachDienThoai() {
 xuLyLayDanhSachDienThoai();
 var danhSachDienThoai = [];
 
-const renderHTML = function(arr) {
-
-  arr = arr || danhSachDienThoai;
+function renderHTML() {
   var htmlcontent = "";
-  for (var i = 0; i < arr.length; i++) {
-    var dienThoai = arr[i];
+  for (var i = 0; i < danhSachDienThoai.length; i++) {
+    var dienThoai = danhSachDienThoai[i];
     htmlcontent += `
           <li class="item">
             <div class="item__info">
@@ -42,30 +40,4 @@ function numberWithCommas(x) {
   parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
   return parts.join(".");
 }
-//Hàm tìm kiếm
-const findEmpl = function () {
-  const foundedEmpl = [];
-  // 1. Lấy keyword người dùng nhaao vào (dom)
-  const keyword = document
-    .getElementById("txtSearch")
-    .value.trim()
-    .toLowerCase();
-  // 2. Tìm theo mã: lập for, kiểm tra từng nhân viên trong mảng, cớ nhân viên nào
-  // có id giống với kywword => push NV đó vào foundedEmpl
-  //3. console.log(foundedEmpl)
-  for (var i = 0; i < danhSachDienThoai.length; i++) {
-    const currentEmp = danhSachDienThoai[i];
-    var fullName = currentEmp.name;
 
-    fullName = fullName.toLowerCase();
-    // console.log(currentEmp.id);
-    if (currentEmp.id === keyword) {
-      foundedEmpl.push(currentEmp);
-      break;
-    }
-    if (fullName.indexOf(keyword) !== -1) {
-      foundedEmpl.push(currentEmp);
-    }
-  }
-  renderHTML(foundedEmpl);
-}
