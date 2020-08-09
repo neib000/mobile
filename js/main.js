@@ -24,6 +24,9 @@ const renderHTML = function (arr) {
               <h3>
               ${dienThoai.name}
               </h3>
+              <h4>
+              ${dienThoai.description}
+              </h4>
               <div class="price">
               ${numberWithCommas(dienThoai.price)}₫
               </div>
@@ -70,7 +73,7 @@ const selectioneBrand = function () {
   console.log(sltBrand);
   for (var i = 0; i < danhSachDienThoai.length; i++) {
     const currentMobile = danhSachDienThoai[i];
-    var nameBrand = currentMobile.type;
+    var nameBrand = currentMobile.type.toLowerCase();
 
     // console.log(currentMobile.id);
     if (sltBrand === nameBrand) {

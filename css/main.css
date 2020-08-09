@@ -189,6 +189,12 @@ button:focus {
 .product .container ul li .item__info h3 {
   line-height: 1.3em;
   font-size: 17px;
+  font-weight: 700;
+}
+
+.product .container ul li .item__info h4 {
+  line-height: 1.3em;
+  font-size: 14px;
 }
 
 .product .container ul li .item__info .price {
