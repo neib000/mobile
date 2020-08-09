@@ -7,7 +7,7 @@ function xuLyLayDanhSachDienThoai() {
   });
 }
 xuLyLayDanhSachDienThoai();
-getData();
+getData(); 
 renderBTN();
 const renderHTML = function (arr) {
   arr = arr || danhSachDienThoai;

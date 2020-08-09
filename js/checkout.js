@@ -139,7 +139,7 @@ const increaseAmount = function (id) {
   if (index !== -1) {
     cartList[index].invetory++;
     if(cartList[index].invetory > danhSachDienThoai[indexApi].invetory){
-      alert( "Sản phẩm " + danhSachDienThoai[indexApi].invetory +" chỉ còn " + danhSachDienThoai[indexApi].invetory);
+      alert( "Sản phẩm " + danhSachDienThoai[indexApi].name +" chỉ còn " + danhSachDienThoai[indexApi].invetory);
     }else{
       cartList[index] = new Mobile(
         cartList[index].id,
