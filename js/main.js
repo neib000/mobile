@@ -6,7 +6,9 @@ function xuLyLayDanhSachDienThoai() {
     renderHTML();
   });
 }
+
 xuLyLayDanhSachDienThoai();
+// console.log(danhSachDienThoai);
 getData(); 
 renderBTN();
 const renderHTML = function (arr) {
@@ -52,6 +54,7 @@ const findMobile = function () {
   // có id giống với kywword => push NV đó vào foundedMoblie
   //3. console.log(foundedMoblie)
   for (var i = 0; i < danhSachDienThoai.length; i++) {
+    // console.log(danhSachDienThoai);
     const currentMobile = danhSachDienThoai[i];
     var fullName = currentMobile.name;
 
@@ -84,6 +87,7 @@ const selectioneBrand = function () {
     }
   }
   renderHTML(foundedMoblie);
+  
 };
 const sltSortBrand = function () {
   const sltBrand = document.getElementById("sortMobile").value.toLowerCase();

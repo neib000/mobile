@@ -18,6 +18,7 @@ const findById = function (id) {
 const findByIdApi = function (id) {
   // console.log(id);
   for (var i = 0; i < danhSachDienThoai.length; i++) {
+
     if (danhSachDienThoai[i].id === id) {
       return i;
     }

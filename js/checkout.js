@@ -15,13 +15,13 @@ const deleteMB = function (id) {
     cartList.splice(index, 1);
     saveData();
     renderBTN();
-    renderCheckout();
-    // renderPrices();
+    renderCheckout(renderPrices);
+  
   }
 };
 getData();
 //Page Checkout()
-const renderCheckout = function () {
+const renderCheckout = function (callback) {
   let htmlcontentCart = "";
   if (cartList.length <= 0) {
     htmlcontentCart += `   
@@ -80,10 +80,9 @@ const renderCheckout = function () {
             `;
     }
     document.getElementById("cardProductsList").innerHTML = htmlcontentCart;
-    // renderPrices();
+    callback();
   }
 };
-renderCheckout();
 const renderPrices = function () {
   sum = 0;
   let htmlcontent = "";
@@ -94,9 +93,11 @@ const renderPrices = function () {
   htmlcontent = `${numberWithCommas(sum)}₫`;
   document.getElementById("priceValue").innerHTML = htmlcontent;
 };
-renderPrices();
+
+renderCheckout(renderPrices);
 
 const payMB = function () {
+  upDataCheckOut();
   cartList.splice(0, cartList.length);
   saveData();
   renderBTN();
@@ -121,8 +122,8 @@ const decreaseAmount = function (id) {
         cartList[index].type
       );
       saveData();
-      renderCheckout();
-      renderPrices();
+      renderCheckout(renderPrices);
+      // renderPrices();
     }
 
     // renderBTN();
@@ -138,9 +139,14 @@ const increaseAmount = function (id) {
   console.log(index);
   if (index !== -1) {
     cartList[index].invetory++;
-    if(cartList[index].invetory > danhSachDienThoai[indexApi].invetory){
-      alert( "Sản phẩm " + danhSachDienThoai[indexApi].name +" chỉ còn " + danhSachDienThoai[indexApi].invetory);
-    }else{
+    if (cartList[index].invetory > danhSachDienThoai[indexApi].invetory) {
+      alert(
+        "Sản phẩm " +
+          danhSachDienThoai[indexApi].name +
+          " chỉ còn " +
+          danhSachDienThoai[indexApi].invetory
+      );
+    } else {
       cartList[index] = new Mobile(
         cartList[index].id,
         cartList[index].name,
@@ -151,10 +157,40 @@ const increaseAmount = function (id) {
         cartList[index].type
       );
       saveData();
-      renderCheckout();
-      renderPrices();
+      renderCheckout(renderPrices);
+      // renderPrices();
     }
     // renderBTN();
     // document.getElementById("inputAmount").innerHTML = htmlcontent;
   }
 };
+console.log(cartList);
+// console.log(danhSachDienThoai);
+const upDataCheckOut = function () {
+  for (let i = 0; i < cartList.length; i++) {
+    console.log(cartList[i].id);
+    const index = findByIdApi(cartList[i].id);
+    console.log(index);
+    if (index !== -1) {
+      // console.log(danhSachDienThoai[index].invetory);
+      // console.log(cartList[i].invetory);
+      danhSachDienThoai[index].invetory =
+        danhSachDienThoai[index].invetory - cartList[i].invetory;
+      console.log(danhSachDienThoai[index].invetory);
+      const productsMoblie = new Mobile(
+        danhSachDienThoai[index].id,
+        danhSachDienThoai[index].name,
+        danhSachDienThoai[index].image,
+        danhSachDienThoai[index].invetory,
+        danhSachDienThoai[index].price,
+        danhSachDienThoai[index].invetory,
+        danhSachDienThoai[index].type
+      );
+      // console.log(productsMoblie);
+      capNhatDienThoai(danhSachDienThoai[index].id, productsMoblie).then(function (){
+        xuLyLayDanhSachDienThoaiCheckout();
+      })
+    }
+  }
+};
+// upDataCheckOut();
