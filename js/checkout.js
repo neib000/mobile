@@ -99,9 +99,9 @@ renderCheckout(renderPrices);
 const payMB = function () {
   upDataCheckOut();
   cartList.splice(0, cartList.length);
-  saveData();
-  renderBTN();
-  renderCheckout();
+    saveData();
+    renderBTN();
+    renderCheckout();
 };
 const decreaseAmount = function (id) {
   id = id.toString();
