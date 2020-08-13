@@ -29,7 +29,7 @@ const renderCheckout = function (callback) {
 
 <i class="fa fa-shopping-cart empty__img"></i>
 <p class="empty__note">Không có sản phẩm nào trong giỏ hàng của bạn.</p>
-<a href="/" class="empty__btn">Tiếp tục mua sắm</a>
+<a href="./index.html" class="empty__btn">Tiếp tục mua sắm</a>
 </div>
     `;
     document.getElementById("tblCheckout").innerHTML = htmlcontentCart;
@@ -181,7 +181,7 @@ const upDataCheckOut = function () {
         danhSachDienThoai[index].id,
         danhSachDienThoai[index].name,
         danhSachDienThoai[index].image,
-        danhSachDienThoai[index].invetory,
+        danhSachDienThoai[index].description,
         danhSachDienThoai[index].price,
         danhSachDienThoai[index].invetory,
         danhSachDienThoai[index].type

@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trang ADMIN</title>
+    <title>ADMIN</title>
+     <!-- logo -->
+     <link rel="shortcut icon" href="./img/logo.ico" type="image/x-icon">
     <!-- fontawesome -->
     <link
       rel="stylesheet"
@@ -20,6 +22,41 @@
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <a class="navbar-brand" href="./index.html"
+            ><img src="./img/logo.png " alt=""
+          /></a>
+
+          <!-- <div class="input-group">
+            <input
+              type="text"
+              oninput="findMobile()"
+              id="txtSearch"
+              class="form-control"
+              placeholder="Tìm sản phẩm theo tên, thương hiệu bạn mong muốn ..."
+              aria-label="Recipient's username"
+              aria-describedby="basic-addon2"
+            />
+            <div class="input-group-append">
+              <span class="input-group-text" id="basic-addon2"
+                >Tìm kiếm <i class="fa fa-search"></i
+              ></span>
+            </div>
+          </div> -->
+          <div class="btnCart">
+            <a href="./checkout.html">
+              <div class="btnCart__cart d-inline-block">
+                <i class="fa fa-shopping-cart d-inline-block"></i>
+                <span class="d-inline-block">Giỏ Hàng</span>
+                <span class="btnCart__text d-inline-block" id="btnAmount"></span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
     <section class="product">
       <div class="container">
       <h1>Hello ADMIN</h1>
@@ -131,6 +168,7 @@
     <script src="./js/models/Mobile.js"></script>
     <script src="./js/services/axios.js"></script>
     <script src="./js/services/MobileServices.js"></script>
+    <script src="./js/general.js"></script>
     <script src="./js/add-phone.js"></script>
     
   </body>

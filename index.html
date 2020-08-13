@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cửa Hàng Di Động</title>
+    <!-- logo -->
+    <link rel="shortcut icon" href="./img/logo.ico" type="image/x-icon" />
     <!-- fontawesome -->
     <link
       rel="stylesheet"
@@ -26,19 +28,53 @@
         <div class="heart"></div>
       </div>
     </div>
-    <header></header>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <a class="navbar-brand" href="./index.html"
+            ><img src="./img/logo.png " alt=""
+          /></a>
+
+          <div class="input-group">
+            <input
+              type="text"
+              oninput="findMobile()"
+              id="txtSearch"
+              class="form-control"
+              placeholder="Tìm sản phẩm theo tên, thương hiệu bạn mong muốn ..."
+              aria-label="Recipient's username"
+              aria-describedby="basic-addon2"
+            />
+            <div class="input-group-append">
+              <span class="input-group-text" id="basic-addon2"
+                >Tìm kiếm <i class="fa fa-search"></i
+              ></span>
+            </div>
+          </div>
+          <div class="btnCart">
+            <a href="./checkout.html">
+              <div class="btnCart__cart d-inline-block">
+                <i class="fa fa-shopping-cart d-inline-block"></i>
+                <span class="d-inline-block">Giỏ Hàng</span>
+                <span class="btnCart__text d-inline-block" id="btnAmount"></span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
     <section class="product">
       <div class="container">
         <!-- <img src="./img/samsung/samsung-galaxy-note-20-plus-600x600-1-600x600.jpg" alt=""> -->
-        <div class="w-25 mb-3 d-inline-block">
+        <!-- <div class="w-25 mb-3 d-inline-block">
           <input
-            oninput="findMobile()"
+        
             type="text"
             placeholder="Nhập mã hoặc tên"
             class="form-control"
             id="txtSearch"
           />
-        </div>
+        </div> -->
         <select
           class="w-25 mb-3 d-inline-block"
           id="brandMobile"
@@ -59,15 +95,6 @@
           <option value="tang">Giá tiền tăng dần</option>
           <option value="giam">Giá tiền giảm dần</option>
         </select>
-        <div class="btnCart mb-3 d-inline-block">
-          <a href="./checkout.html">
-            <div class="btnCart__cart">
-              <i class="fa fa-shopping-cart"></i>
-              <span>Giỏ Hàng</span>
-              <span class="btnCart__text" id="btnAmount"></span>
-            </div>
-          </a>
-        </div>
         <ul id="tblDanhSachDienThoai">
           <!-- <li class="item">
             <div class="item__info">
@@ -199,4 +226,3 @@
     <!-- <script src="./js/checkout.js"></script> -->
   </body>
 </html>
-

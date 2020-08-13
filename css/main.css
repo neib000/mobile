@@ -130,6 +130,63 @@ button:focus {
   }
 }
 
+header nav {
+  background-color: #2c3e50;
+}
+
+header nav .form-control:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+header nav .input-group i {
+  margin-left: 0.3rem;
+}
+
+header nav .btnCart {
+  text-align: end;
+  margin-left: 1rem;
+  width: 18%;
+  margin-bottom: 0;
+  font-size: 1rem;
+}
+
+header nav .btnCart a {
+  text-decoration: none;
+}
+
+header nav .btnCart__cart {
+  border: 2px solid #189eff;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 0.38rem 0.9rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+header nav .btnCart__cart:hover {
+  background-color: #189eff;
+  color: white;
+}
+
+header nav .btnCart__cart .btnCart__text {
+  color: #4a4a4a;
+  height: 1.2rem;
+  display: inline-block;
+  text-align: center;
+  line-height: 1.2rem;
+  margin-left: 9px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  background: #fdd835;
+  border-radius: 2px;
+  padding: 0px 6px;
+}
+
+header nav a img {
+  height: 2.3rem;
+}
+
 .product {
   margin-top: 20px;
 }
@@ -148,8 +205,9 @@ button:focus {
 }
 
 .product .container ul li {
+  display: block;
   text-decoration: none;
-  width: 24.9%;
+  width: 25%;
   position: relative;
   padding-bottom: 10px;
   overflow: hidden;
@@ -182,7 +240,7 @@ button:focus {
   transition: all 0.3s;
   display: block;
   margin: 25px auto;
-  height: 200px;
+  height: 11rem;
   width: auto;
 }
 
@@ -221,38 +279,6 @@ button:focus {
 .product .container ul li .btnbuy:hover {
   background-color: #f76b1c;
   color: white;
-}
-
-.product .btnCart a {
-  text-decoration: none;
-}
-
-.product .btnCart__cart {
-  border: 2px solid #189eff;
-  border-radius: 5px;
-  background-color: #fff;
-  padding: 10px 40px;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-.product .btnCart__cart:hover {
-  background-color: #189eff;
-  color: white;
-}
-
-.product .btnCart__cart .btnCart__text {
-  color: #4a4a4a;
-  height: 20px;
-  display: inline-block;
-  text-align: center;
-  line-height: 20px;
-  margin-left: 9px;
-  font-size: 12px;
-  font-weight: 700;
-  background: #fdd835;
-  border-radius: 2px;
-  padding: 0px 6px;
 }
 
 .container--checkout {

@@ -138,4 +138,4 @@ function xuLySuaDienThoai(id){
 }
 
 
-
+renderBTN();

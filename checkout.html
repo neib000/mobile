@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Giỏ Hàng</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/logo.ico" type="image/x-icon">
 
     <!-- Bootstrap CSS -->
     <link
@@ -20,6 +20,41 @@
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body style="background-color: #f4f4f4;">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <a class="navbar-brand" href="./index.html"
+            ><img src="./img/logo.png " alt=""
+          /></a>
+
+          <!-- <div class="input-group">
+            <input
+              type="text"
+              oninput="findMobile()"
+              id="txtSearch"
+              class="form-control"
+              placeholder="Tìm sản phẩm theo tên, thương hiệu bạn mong muốn ..."
+              aria-label="Recipient's username"
+              aria-describedby="basic-addon2"
+            />
+            <div class="input-group-append">
+              <span class="input-group-text" id="basic-addon2"
+                >Tìm kiếm <i class="fa fa-search"></i
+              ></span>
+            </div>
+          </div> -->
+          <div class="btnCart">
+            <a href="./checkout.html">
+              <div class="btnCart__cart d-inline-block">
+                <i class="fa fa-shopping-cart d-inline-block"></i>
+                <span class="d-inline-block">Giỏ Hàng</span>
+                <span class="btnCart__text d-inline-block" id="btnAmount"></span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
     <div class="container container--checkout">
       <h2 class="d-inline-block">Giỏ Hàng</h2>
       <span class="d-inline-block">
